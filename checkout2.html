@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Step 2 | Coachella</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="checkout2.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+          <img src="images/coachellalog.svg" alt="Coachella Logo">
+
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button class="ticket-btn">
+            Buy Tickets
+        </button>
+
+    </header>
+
+    <section class="payment-section">
+
+        <div class="section-title">
+            <p>PAYMENT METHOD</p>
+            <h2>Choose Your Payment Method</h2>
+        </div>
+
+        <form action="checkout3.html" class="payment-box">
+
+            <h3>Select how you would like to pay</h3>
+
+            <label class="payment-option">
+                <input type="radio" name="payment" value="credit-card" required>
+                <span>Credit Card</span>
+            </label>
+
+            <label class="payment-option">
+                <input type="radio" name="payment" value="debit-card">
+                <span>Debit Card</span>
+            </label>
+
+            <label class="payment-option">
+                <input type="radio" name="payment" value="paypal">
+                <span>PayPal</span>
+            </label>
+
+            <label class="payment-option">
+                <input type="radio" name="payment" value="apple-pay">
+                <span>Apple Pay</span>
+            </label>
+
+            <div class="checkout-buttons">
+
+                <a href="checkout1.html" class="secondary-btn">
+                    Back
+                </a>
+
+                <button type="submit" class="main-btn">
+                    Continue
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</body>
+</html>

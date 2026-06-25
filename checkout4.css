@@ -1,0 +1,220 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#070311;
+    color:white;
+}
+
+header{
+    width:100%;
+    padding:25px 70px;
+
+    position:fixed;
+    top:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(0,0,0,.35);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+}
+
+.confirmation{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:150px 30px;
+
+    background:
+    radial-gradient(circle at top,
+    #5c006b,
+    #0b0014);
+}
+
+.confirmation-box{
+
+    max-width:800px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,44,223,.2);
+
+    border-radius:25px;
+
+    padding:70px;
+}
+
+.checkmark{
+
+    width:120px;
+    height:120px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:60px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #ff2cdf,
+    #8f00ff);
+
+    margin-bottom:30px;
+}
+
+.mini-title{
+
+    color:#ff2cdf;
+
+    letter-spacing:3px;
+
+    font-size:12px;
+
+    margin-bottom:15px;
+}
+
+h1{
+
+    font-size:54px;
+
+    margin-bottom:25px;
+}
+
+.description{
+
+    color:#d8d8d8b2;
+
+    line-height:20px;
+
+    max-width:600px;
+
+    margin:auto;
+
+    font-size:15px;
+}
+
+.order-number{
+
+    margin-top:40px;
+
+    margin-bottom:40px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#ff2cdf;
+}
+
+.main-btn{
+
+    display:inline-block;
+
+    padding:16px 34px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:600;
+
+    background:
+    linear-gradient(
+    90deg,
+    #ff2cdf,
+    #8f00ff);
+}
+
+.logo img{
+    height:40px;
+    width:auto;
+    display:block;
+}
+
+.confirmation-logo{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:20px;
+}
+
+.confirmation-logo img{
+
+    width:450px;
+
+    max-width:90%;
+
+    height:auto;
+
+    animation:logoPulse 4s ease-in-out infinite;
+
+    filter:
+    drop-shadow(0 0 15px rgba(255,44,223,.25))
+    drop-shadow(0 0 40px rgba(143,0,255,.15));
+}
+
+.festival-message{
+
+    font-size:20px;
+
+    color:#d8d8d8;
+
+    margin-bottom:35px;
+
+    font-weight:300;
+
+    letter-spacing:.5px;
+
+    text-align:center;
+}
+
+@keyframes logoPulse{
+
+    0%{
+        transform:scale(0.95);
+        opacity:.85;
+    }
+
+    50%{
+        transform:scale(1.1);
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(0.95);
+        opacity:.85;
+    }
+}

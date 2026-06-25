@@ -1,0 +1,789 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+@media (max-width: 1024px) {
+   
+    header {
+        position: relative !important;
+        height: auto !important;
+        padding: 20px 40px !important;
+        flex-direction: row !important; 
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+
+    nav {
+        display: flex !important;
+        gap: 20px !important;
+    }
+
+   
+    .hero-description {
+        width: 100%;
+        max-width: 600px !important; 
+        margin: 0 auto 35px auto !important;
+        text-wrap: balance; 
+    }
+
+   
+    .ticker {
+        position: relative !important;
+        top: 0 !important;
+        height: auto !important;
+        padding: 10px 0 !important;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 40px 20px 60px 20px !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        line-height: 52px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .hero-video {
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 550px;
+        height: 280px !important;
+        margin-top: 20px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .location {
+        flex-direction: column;
+        padding: 60px 40px;
+    }
+    .location-text, .map {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+    header {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: row !important;     
+        justify-content: space-between !important; 
+        align-items: center !important;
+        height: auto !important;
+        padding: 12px 8px !important;        
+        gap: 4px !important;                
+        width: 100% !important;
+    }
+
+   
+    .logo {
+        max-width: 75px !important;          
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    
+    nav {
+        display: flex !important;
+        flex-direction: row !important;     
+        flex-wrap: nowrap !important;       
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 6px !important;                 
+    }
+
+    nav a {
+        margin: 0 !important;
+        font-size: 10px !important;         
+        letter-spacing: -0.2px !important;  
+        white-space: nowrap !important;     
+    }
+
+   
+    .ticket-btn, .my-orders-btn, [class*="-btn"] { 
+        display: inline-block !important;
+        font-size: 9px !important;           
+        padding: 6px 10px !important;       
+        white-space: nowrap !important;
+        border-radius: 20px !important;
+        margin: 0 !important;               
+    }
+
+    
+    .ticker {
+        position: relative !important;
+        top: 0 !important;
+        margin-top: 0 !important;
+        padding: 8px 0 !important;
+    }
+
+    .hero {
+        padding: 30px 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .hero h1 {
+        font-size: 30px !important;
+        line-height: 38px !important;
+    }
+
+    .hero-video {
+        position: relative !important;
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    
+    .cards { grid-template-columns: 1fr !important; }
+    .countdown { gap: 15px !important; }
+    .time-box { width: 45% !important; padding: 15px !important; }
+    .time-box span { font-size: 32px !important; }
+    .contact { flex-direction: column !important; gap: 30px !important; }
+    .faq, .contact-form { width: 100% !important; }
+    
+    .orders {
+        padding: 40px 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .orders .section-title h1 {
+        font-size: 32px !important;
+        margin-top: 10px !important;
+    }
+
+    .order-card {
+        width: 100% !important;
+        max-width: 340px !important; 
+        margin: 20px auto !important;
+        padding: 20px 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    .order-header {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: flex-start !important; 
+        gap: 10px !important;
+        padding-bottom: 15px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .order-header h3 {
+        font-size: 16px !important;
+    }
+
+    .order-header .status {
+        margin: 0 !important; 
+        display: inline-block !important;
+    }
+
+    .info-row {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: flex-start !important; 
+        gap: 4px !important;
+        padding: 12px 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        width: 100% !important;
+    }
+
+    .info-row span {
+        font-size: 12px !important;
+        opacity: 0.7; 
+    }
+
+    .info-row strong {
+        font-size: 15px !important;
+    }
+
+    .info-row.total-row {
+        flex-direction: row !important; 
+        justify-content: space-between !important;
+        align-items: center !important;
+        border-bottom: none !important; 
+        padding-top: 20px !important;
+        margin-top: 5px !important;
+    }
+
+    .total-row span {
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        opacity: 1 !important;
+    }
+
+    .total-row strong {
+        font-size: 24px !important; 
+        color: #fff !important;
+    }
+
+    .home-btn {
+        display: block !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        text-align: center !important;
+        margin: 20px auto 0 auto !important;
+        box-sizing: border-box !important;
+    }
+ 
+    .tickets-grid, 
+    .cards-container,
+    div[class*="grid"] {
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center !important;    
+    gap: 30px !important;             
+    width: 100% !important;
+    max-width: 100% !important;       
+    padding: 20px 15px !important;    
+    overflow-x: visible !important;   
+    box-sizing: border-box !important;
+    }
+
+
+    .ticket-card, 
+    .card,
+    [class*="ticket"] div[class*="card"] {
+    width: 100% !important;           
+    max-width: 320px !important;      
+    height: auto !important;          
+    margin: 0 auto !important;        
+    display: flex !important;
+    flex-direction: column !important; 
+    justify-content: space-between !important;
+    padding: 30px 20px !important;
+    box-sizing: border-box !important;
+    }
+
+
+    .ticket-card .price,
+    [class*="card"] .price {
+    font-size: 32px !important; 
+    }
+
+    .ticket-card h3,
+    [class*="card"] h3 {
+    font-size: 18px !important; 
+    }
+    
+    
+    
+    .buyer-section {
+        padding: 30px 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+   
+    .buyer-section .section-title h2 {
+        font-size: 26px !important; 
+        line-height: 34px !important;
+        margin-top: 5px !important;
+        text-align: center !important;
+    }
+
+    
+    .buyer-box {
+        width: 100% !important;
+        max-width: 350px !important; 
+        margin: 20px auto !important;
+        padding: 25px 20px !important; 
+        box-sizing: border-box !important;
+    }
+
+    .buyer-box h3 {
+        font-size: 18px !important;
+        margin-bottom: 20px !important;
+        text-align: center !important;
+    }
+
+    
+    .buyer-box input,
+    .buyer-box select {
+        width: 100% !important;
+        height: 48px !important; 
+        font-size: 14px !important;
+        padding: 10px 15px !important;
+        margin-bottom: 16px !important; 
+        box-sizing: border-box !important;
+    }
+
+   
+    .checkout-buttons {
+        display: flex !important;
+        flex-direction: row !important; 
+        justify-content: space-between !important;
+        gap: 12px !important;
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+
+    
+    .checkout-buttons .secondary-btn,
+    .checkout-buttons .main-btn {
+        flex: 1 !important; 
+        padding: 12px 5px !important;
+        font-size: 14px !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        display: inline-block !important;
+    }
+
+   
+    
+    
+    .payment-section {
+        padding: 30px 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    
+    .payment-section .section-title h2 {
+        font-size: 24px !important; 
+        line-height: 32px !important;
+        margin-top: 5px !important;
+        text-align: center !important;
+        padding: 0 10px !important;
+    }
+
+    
+    .payment-box {
+        width: 100% !important;
+        max-width: 320px !important; 
+        margin: 25px auto !important;
+        padding: 25px 20px !important; 
+        box-sizing: border-box !important;
+    }
+
+   
+    .payment-box h3 {
+        font-size: 16px !important;
+        line-height: 22px !important;
+        margin-bottom: 25px !important;
+        text-align: center !important;
+    }
+
+    
+    .payment-option {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important; 
+        padding: 14px 10px !important; 
+        margin-bottom: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    
+    .payment-option input[type="radio"] {
+        width: 18px !important;
+        height: 18px !important;
+        margin: 0 !important;
+        cursor: pointer;
+    }
+
+    
+    .payment-option span {
+        font-size: 15px !important;
+        font-weight: 500 !important;
+    }
+
+    
+    .payment-box .checkout-buttons {
+        display: flex !important;
+        flex-direction: row !important; 
+        justify-content: space-between !important;
+        gap: 12px !important;
+        width: 100% !important;
+        margin-top: 25px !important; 
+    }
+
+    
+    .payment-box .checkout-buttons .secondary-btn,
+    .payment-box .checkout-buttons .main-btn {
+        flex: 1 !important; 
+        padding: 12px 5px !important;
+        font-size: 14px !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        display: inline-block !important;
+    }
+
+    
+    .card-section {
+        padding: 30px 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    
+    .card-section .section-title h2 {
+        font-size: 24px !important; 
+        line-height: 32px !important;
+        margin-top: 5px !important;
+        text-align: center !important;
+    }
+
+    
+    .card-box {
+        width: 100% !important;
+        max-width: 350px !important; 
+        margin: 20px auto !important;
+        padding: 25px 18px !important;
+        box-sizing: border-box !important;
+    }
+
+    
+    .card-box h3 {
+        font-size: 16px !important;
+        line-height: 22px !important;
+        margin-bottom: 20px !important;
+        text-align: center !important;
+    }
+
+    
+    .card-box > input {
+        width: 100% !important;
+        height: 48px !important;
+        font-size: 14px !important;
+        padding: 10px 15px !important;
+        margin-bottom: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    
+    .card-box .row {
+        display: flex !important;
+        flex-direction: row !important; 
+        gap: 12px !important;           
+        width: 100% !important;
+        margin-bottom: 25px !important;
+    }
+
+    
+    .card-box .row input {
+        flex: 1 !important;
+        width: 50% !important;
+        height: 48px !important;
+        font-size: 14px !important;
+        padding: 10px 12px !important;
+        margin-bottom: 0 !important; 
+        box-sizing: border-box !important;
+    }
+
+    
+    .card-box .summary {
+        margin-top: 5px !important;
+        padding: 15px 12px !important;
+        border-radius: 8px !important;
+        background: rgba(255, 255, 255, 0.03) !important; 
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .card-box .summary h4 {
+        font-size: 15px !important;
+        margin-bottom: 12px !important;
+        text-align: left !important;
+    }
+
+    
+    .card-box .summary-row {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important; 
+        align-items: center !important;
+        padding: 6px 0 !important;
+        width: 100% !important;
+    }
+
+    .card-box .summary-row span {
+        font-size: 13px !important;
+    }
+
+    
+    .card-box .summary-row.total {
+        margin-top: 8px !important;
+        padding-top: 12px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .card-box .summary-row.total span {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+    }
+
+   
+    .card-box .checkout-buttons {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        gap: 12px !important;
+        width: 100% !important;
+        margin-top: 25px !important;
+    }
+
+    
+    .card-box .checkout-buttons .secondary-btn,
+    .card-box .checkout-buttons .main-btn {
+        flex: 1 !important; 
+        padding: 14px 5px !important; 
+        font-size: 13px !important;  
+        text-align: center !important;
+        white-space: nowrap !important;
+        display: inline-block !important;
+    }
+
+    
+    .confirmation {
+        padding: 40px 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: calc(100vh - 80px) !important; 
+    }
+
+    
+    .confirmation-box {
+        width: 100% !important;
+        max-width: 350px !important; 
+        margin: 0 auto !important;
+        padding: 35px 20px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    
+    .checkmark {
+        width: 70px !important;
+        height: 70px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .checkmark img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    
+    .mini-title {
+        font-size: 11px !important;
+        letter-spacing: 2px !important;
+        margin-bottom: 15px !important;
+    }
+
+    
+    .confirmation-logo {
+        width: 100% !important;
+        max-width: 160px !important; 
+        margin: 0 auto 15px auto !important;
+    }
+
+    .confirmation-logo img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    
+    .festival-message {
+        font-size: 16px !important;
+        line-height: 22px !important;
+        font-weight: 600 !important;
+        margin-bottom: 15px !important;
+        padding: 0 5px !important;
+    }
+
+    
+    .description {
+        font-size: 13px !important;
+        line-height: 20px !important;
+        opacity: 0.8 !important;
+        margin-bottom: 25px !important;
+        padding: 0 5px !important;
+    }
+
+    
+    .order-number {
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        padding: 10px 20px !important;
+        margin-bottom: 25px !important;
+        display: inline-block !important;
+        width: auto !important;
+    }
+
+    
+    .confirmation-box .main-btn {
+        display: block !important;
+        width: 100% !important;
+        max-width: 260px !important; 
+        padding: 14px 0 !important;
+        font-size: 14px !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+
+    
+    .schedule-section {
+        padding: 40px 15px !important;
+        overflow-x: hidden !important;
+    }
+
+    
+    .schedule-section .section-title h2 {
+        font-size: 26px !important;
+        line-height: 34px !important;
+        text-align: center !important;
+    }
+
+    
+    .days-selector {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        margin: 25px 0 !important;
+        width: 100% !important;
+    }
+
+    .day-btn {
+        flex: 1 !important;
+        max-width: 105px !important;
+        padding: 8px 4px !important;
+        font-size: 11px !important;
+    }
+
+    .day-btn span {
+        font-size: 9px !important;
+        display: block !important;
+    }
+
+    
+    .schedule-container {
+        width: 100% !important;
+        margin-bottom: 35px !important;
+        padding: 0 !important;
+    }
+
+    
+    .schedule-date {
+        text-align: center !important;
+        margin-bottom: 20px !important;
+    }
+
+    .schedule-date h3 {
+        font-size: 22px !important;
+        margin-top: 4px !important;
+    }
+
+    
+    .timeline {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+
+   
+    .timeline-item {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: flex-start !important;
+        gap: 6px !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    
+    .timeline-item .time {
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        color: #ff2cdf !important; 
+        margin-left: 5px !important;
+    }
+
+    
+    .event-card {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important; 
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 16px 15px !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+    }
+
+    
+    .event-info h4 {
+        font-size: 15px !important;
+        line-height: 20px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .event-info p {
+        font-size: 12px !important;
+        opacity: 0.7 !important;
+    }
+
+    
+    .event-tag {
+        font-size: 10px !important;
+        padding: 4px 10px !important;
+        border-radius: 12px !important;
+        white-space: nowrap !important;
+    }
+
+}

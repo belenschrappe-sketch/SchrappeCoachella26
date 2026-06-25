@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Step 1 | Coachella</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="checkout1.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+          <img src="images/coachellalog.svg" alt="Coachella Logo">
+        </div>
+
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button class="ticket-btn">
+            Buy Tickets
+        </button>
+
+    </header>
+
+    <section class="buyer-section">
+
+        <div class="section-title">
+            <p>BUYER INFORMATION</p>
+            <h2>Complete Your Information</h2>
+        </div>
+
+        <form action="checkout2.html" class="buyer-box">
+
+            <h3>Tell us about yourself</h3>
+
+            <input
+                type="text"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="email"
+                placeholder="Email Address"
+                required>
+
+            <input
+                type="tel"
+                placeholder="Phone Number"
+                required>
+
+            <input
+                type="number"
+                placeholder="Number of Tickets"
+                min="1"
+                required>
+
+            <select required>
+                <option value="">
+                    Select Ticket Type
+                </option>
+
+                <option>
+                    General Admission
+                </option>
+
+                <option>
+                    VIP
+                </option>
+
+                <option>
+                    Premium
+                </option>
+            </select>
+
+            <div class="checkout-buttons">
+
+                <a href="tickets.html"
+                   class="secondary-btn">
+                    Back
+                </a>
+
+                <button type="submit"
+                        class="main-btn">
+                    Continue
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</body>
+</html>
